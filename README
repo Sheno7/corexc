@@ -1,0 +1,17 @@
+To run project
+1- local
+    a-composer install
+    b- cd public and run php -S 127.0.0.1:5000
+     - or php corexc serve
+2-docker
+    a-docker compose build
+    b-docker-compose exec app rm -rf vendor composer.lock
+    d-docker compose up
+    c-docker-compose exec app composer install
+run unit test
+1-local
+  a-php corexc test
+2-docker
+  a-docker-compose exec app php corexc test
+
+api link "http://127.0.0.1:5000/rooms"
